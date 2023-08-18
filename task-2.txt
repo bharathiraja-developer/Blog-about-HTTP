@@ -1,0 +1,56 @@
+Question: Write a blog about objects and its internal representation in Javascript
+Answer:
+
+Introduction
+	Objects are important data types in javascript. Objects are differ from primitive datatypes (i.e. number, string, boolean, etc.). Primitive data types contain one value but Objects can hold many values in form of Key: value pair. These keys can be variables or functions and are called properties and methods, respectively, in the context of an object.
+
+Let’s have an example of apple phone and list out its properties(Features):
+
+Type : Mobile phone
+Model: Apple iPhone 14 Pro
+Color: White
+ROM : 256GB
+Display size : 6.12inches
+Network type : 5g
+Rating: 4.7/5
+
+Taking the above as reference, I'll stress up on objects, Object properties and Methods
+
+Objects
+The following code assigns a simple value (Mobile phone) to a variable named type:
+	var Type = "Mobile phone";
+The following code assigns many values (Mobile phonem,Apple iPhone 14 Pro,White and so on...) to a variable named Phone:
+	var phone = {Type : "Mobile phone" , Model: "Apple iPhone 14 Pro", Color: "White", ROM : "256GB", Display size : "6.12inches", Network type : "5g" Rating: "4.7/5"};
+The values are written as name:value pairs (name and value separated by a colon).
+
+Syntax:
+
+	var <object-name> = {key1: value1, key2: value2,... keyN: valueN};
+
+Object Properties
+
+The name:values pairs in JavaScript objects are called properties.
+	var phone = {Type : "Mobile phone" , Model: "Apple iPhone 14 Pro", Color: "White", ROM : "256GB", Display size : "6.12inches", Network type : "5g" Rating: "4.7/5"};
+
+Properties can usually be changed, added, and deleted, but some are read only.
+
+The syntax for adding a property to an object is :
+
+	ObjectName.ObjectProperty = propertyValue;
+
+The syntax for deleting a property from an object is:
+
+	delete ObjectName.ObjectProperty;
+
+So, Conclusion and simple definition for Java Script properties is “Properties are the values associated with a JavaScript object”.
+
+Object Methods
+An object method is an object property containing a function definition.
+
+i.e.,
+
+Let’s assume to start the phone there will be a mechanical functionality.
+
+function(){return ignition.on}
+and so similar is to stop/brake/headlights on & off, etc.
+So, Conclusion and simple definition for Java Script Object methods is “Methods are actions that can be performed on objects.”.

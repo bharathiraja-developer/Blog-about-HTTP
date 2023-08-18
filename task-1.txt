@@ -1,0 +1,20 @@
+Question : Write a blog on Difference between HTTP1.1 vs HTTP2
+Answer:
+
+Introduction
+	HTTP stands for Hypertext Transfer Protocol.From the release of HTTP1.1 in 1997 until recently, there have been few revisions to the protocol. But in 2015, a reimagined version called HTTP2 was created.
+
+Multiplexing
+	HTTP1.1 loads resources one after the other, so if one resource cannot be loaded, it blocks all the other resources behind it. In contrast, HTTP2 is able to use a single TCP connection to send multiple streams of data at once so that no one resource blocks any other resource.Since this method controls data flow on the level of the application layer, the flow control mechanism does not have to wait for a signal to reach its ultimate destination before adjusting the receive window.
+
+Resource Inlining
+	In HTTP1.1, if the developer knows in advance which additional resources the client machine will need to render the page, they can use a technique called resource inlining to include the required resource directly within the HTML document that the server sends in response to the initial GET request.
+
+Server push
+	In HTTP2 enables multiple concurrent responses to a client’s initial GET request, a server can send a resource to a client along with the requested HTML page, providing the resource before the client asks for it. This process is called server push.
+
+Compression
+	Small files load more quickly than large ones.Programs like gzip have long been used to compress the data sent in HTTP messages, especially to decrease the size of CSS and JavaScript files. The header component of a message, however, is always sent as plain text. Although each header is quite small, the burden of this uncompressed data weighs heavier and heavier on the connection as more requests are made, particularly penalizing complicated, API-heavy web applications that require many different resources and thus many different resource requests.In order to solve this bottleneck, HTTP2 uses HPACK compression to shrink the size of headers.
+
+Conclusion
+	From the analysis, HTTP2 differs from HTTP1.1 in many ways, with some features providing greater levels of control that can be used to better optimize web application performance and other features simply improving upon the previous protocol. Now that you have gained a high-level perspective on the variations between the two protocols, you can consider how such factors as multiplexing, server push, and compression in HTTP2 will affect the changing landscape of web development.
